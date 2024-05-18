@@ -484,87 +484,46 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2358424642040793326, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
   m_PrefabInstance: {fileID: 1993163309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &145206918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145206912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291c8d409d99cca49afcace7088b74d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &145206921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145206912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13a18c2134746af449f171363aceeb60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  capacity: 5
-  items: []
---- !u!114 &145206922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145206912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98bb319ebccddb4438d8c770be0d1c9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max: 100
-  current: 100
 --- !u!4 &145206923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5080724699034065345, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
   m_PrefabInstance: {fileID: 1993163309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &145206924
-MonoBehaviour:
+--- !u!58 &145206924
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145206912}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3557a257b01f7bf42a3a0258d66149b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 2f9764f91d3fe1d48a6913734c7ad7ad, type: 2}
-  attackOffset: {fileID: 0}
-  layers:
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 1
---- !u!114 &145206929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145206912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d44051c8e687674c89c113acdaef7d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 145206922}
-  decorators:
-    flatDamage:
-      maxDamage: 20
-    damageCooldown:
-      cooldownTime: 2
-  animator: {fileID: 0}
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.15
 --- !u!1001 &297733003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47555,7 +47514,7 @@ PrefabInstance:
     - target: {fileID: 6942503643082644426, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 145206922}
+      objectReference: {fileID: 0}
     - target: {fileID: 6942503643082644426, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
       propertyPath: animator
       value: 
@@ -47613,6 +47572,8 @@ PrefabInstance:
     - {fileID: 6942503643082644426, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
     - {fileID: 2667713801623668260, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
     - {fileID: 5432032923742437878, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
+    - {fileID: 6589744598614300658, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
+    - {fileID: 7356906548307323140, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5080724699034065345, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
@@ -47621,19 +47582,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2358424642040793326, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 145206918}
-    - targetCorrespondingSourceObject: {fileID: 2358424642040793326, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 145206921}
-    - targetCorrespondingSourceObject: {fileID: 2358424642040793326, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 145206922}
-    - targetCorrespondingSourceObject: {fileID: 2358424642040793326, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 145206924}
-    - targetCorrespondingSourceObject: {fileID: 2358424642040793326, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 145206929}
   m_SourcePrefab: {fileID: 100100000, guid: 8889782bd15ef65469d2967b2e668eb8, type: 3}
 --- !u!1001 &1995541887
 PrefabInstance:
@@ -47750,7 +47699,6 @@ MonoBehaviour:
   tags:
   - Player
   layers:
-    serializedVersion: 2
     m_Bits: 1
 --- !u!1 &2141773091
 GameObject:
@@ -48344,7 +48292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variables:
-  - {fileID: 9159849649610266623}
+  - {fileID: 0}
   - {fileID: 9159849649610266622}
   - {fileID: 9159849649610266621}
   masterBlackboard: {fileID: 0}
@@ -48398,7 +48346,7 @@ MonoBehaviour:
     height: 45
   parent: {fileID: 9159849649610266616}
   children:
-  - {fileID: 9159849649610266620}
+  - {fileID: 0}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -48526,10 +48474,10 @@ MonoBehaviour:
     y: 360
     width: 160
     height: 45
-  parent: {fileID: 9159849649610266620}
+  parent: {fileID: 0}
   children:
-  - {fileID: 9159849649610266630}
-  - {fileID: 9159849649610266625}
+  - {fileID: 0}
+  - {fileID: 0}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -48548,7 +48496,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Update Enemy Position
   rect:
-    serializedVersion: 2
     x: 360
     y: 300
     width: 160
@@ -48559,20 +48506,25 @@ MonoBehaviour:
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
+  _selected: 0
+  stackState: []
   interval: 1
   randomDeviation: 0
   callOnEnter: 1
+  nextScheduledTime: 0
   enemy:
     useConstant: 0
     mode: 1
     blackboard: {fileID: 9159849649610266612}
     key: Enemy
+    value: {fileID: 0}
     constantValue: {fileID: 0}
   location:
     useConstant: 0
     mode: 1
     blackboard: {fileID: 9159849649610266612}
     key: TargetPosition
+    value: {fileID: 0}
     constantValue: {x: 0, y: 0, z: 0}
 --- !u!114 &9159849649610266621
 MonoBehaviour:
@@ -48634,12 +48586,15 @@ MonoBehaviour:
       maxDamage: 20
     damageCooldown:
       cooldownTime: 1
+      _isInCooldown: 0
   animator: {fileID: 4198330600507427359}
+  _rigidbody: {fileID: 0}
   blackboard: {fileID: 9159849649610266612}
   enemyKey: Enemy
   vision: {fileID: 2109751900}
   walking: {fileID: 6797041307739997060}
   weapon: {fileID: 9159849649610266610}
+  _enemy: {fileID: 0}
 --- !u!114 &9159849649610266625
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -48654,7 +48609,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Move To
   rect:
-    serializedVersion: 2
     x: 480
     y: 460
     width: 160
@@ -48664,23 +48618,27 @@ MonoBehaviour:
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
+  _selected: 0
   self:
     useConstant: 0
     mode: 1
     blackboard: {fileID: 9159849649610266612}
     key: Self
+    value: {fileID: 0}
     constantValue: {fileID: 0}
   location:
     useConstant: 0
     mode: 1
     blackboard: {fileID: 9159849649610266612}
     key: TargetPosition
+    value: {fileID: 0}
     constantValue: {x: 0, y: 0, z: 0}
   threshold:
     useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
+    value: {fileID: 0}
     constantValue: 0.5
 --- !u!114 &9159849649610266626
 MonoBehaviour:
@@ -48696,7 +48654,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Attack
   rect:
-    serializedVersion: 2
     x: 140
     y: 680
     width: 160
@@ -48706,18 +48663,22 @@ MonoBehaviour:
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
+  _selected: 0
   self:
     useConstant: 0
     mode: 1
     blackboard: {fileID: 9159849649610266612}
     key: Self
+    value: {fileID: 0}
     constantValue: {fileID: 0}
   attackRate:
     useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
+    value: {fileID: 0}
     constantValue: 3
+  _isAttacking: 0
 --- !u!114 &9159849649610266627
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -48771,7 +48732,7 @@ MonoBehaviour:
     height: 45
   parent: {fileID: 9159849649610266629}
   children:
-  - {fileID: 9159849649610266626}
+  - {fileID: 0}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -48797,7 +48758,7 @@ MonoBehaviour:
     y: 520
     width: 160
     height: 45
-  parent: {fileID: 9159849649610266630}
+  parent: {fileID: 0}
   children:
   - {fileID: 9159849649610266628}
   - {fileID: 9159849649610266627}
@@ -48819,7 +48780,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Is Close to
   rect:
-    serializedVersion: 2
     x: 240
     y: 460
     width: 160
@@ -48830,24 +48790,30 @@ MonoBehaviour:
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
+  _selected: 0
+  stackState: []
+  lastConditionCheckResult: 0
   abort: 3
   self:
     useConstant: 0
     mode: 1
     blackboard: {fileID: 9159849649610266612}
     key: Self
+    value: {fileID: 0}
     constantValue: {fileID: 0}
   location:
     useConstant: 0
     mode: 1
     blackboard: {fileID: 9159849649610266612}
     key: TargetPosition
+    value: {fileID: 0}
     constantValue: {x: 0, y: 0, z: 0}
   threshold:
     useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
+    value: {fileID: 0}
     constantValue: 2
   invert: 0
 --- !u!1660057539 &9223372036854775807
