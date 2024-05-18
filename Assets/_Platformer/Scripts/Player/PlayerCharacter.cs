@@ -41,17 +41,4 @@ public class PlayerCharacter : Character
                 .Concat(GetComponentsInChildren<IInputable>())
                 .ToList();
     }
-
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        InitInputManager();
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-        Destroy(InputManager.gameObject);
-        InputManager = null;
-    }
 }
