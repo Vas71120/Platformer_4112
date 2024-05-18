@@ -6,7 +6,7 @@ public class Fly : MonoBehaviour
 {
     public float force;
     Rigidbody2D Rigid;
-    public int sampleWindow = 64;
+    public int sampleWindow = 5;
     void Start()
     {
         Rigid = GetComponent<Rigidbody2D>();
