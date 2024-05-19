@@ -1,13 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCharacter : Character
 {
     private IList<IInputable> _inputables;
 
     private InputManager _inputManager;
-
+    
     public InputManager InputManager
     {
         get => _inputManager;
@@ -40,5 +42,11 @@ public class PlayerCharacter : Character
         _inputables = GetComponents<IInputable>()
                 .Concat(GetComponentsInChildren<IInputable>())
                 .ToList();
+        InitInputManager();
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        SceneManager.LoadScene(0);
     }
 }

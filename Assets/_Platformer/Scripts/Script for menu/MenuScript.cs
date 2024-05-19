@@ -9,6 +9,7 @@ public class MenuScript : MonoBehaviour
     {
         SceneManager.LoadScene(numberScenes);
     }
+    
     public void Exit()
     {
         Application.Quit();
