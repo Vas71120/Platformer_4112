@@ -9,10 +9,15 @@ public class ScaleFrommicrophone : MonoBehaviour
     public AudioLoudnessDetection detector;
     public float LoundnessSemsibility = 100;
     public float Threshold = 0.1f;
-	{
-		float loudness = detector.GetloudnessFrommicrophone() * loudnessSensibility
-		if(loudness<threshold)
-
+    void Start()
+    {
+        
+    }
+    void Update()
+    {
+        float loudness = detector.GetloudnessFrommicrophone() * loudnessSensibility;
+        if (loudness < threshold)
             loudness = 0;
-		transform.localScale = Vector3.Lerp(minScale, maxScale, loudness)
+        transform.localScale = Vector3.Lerp(minScale, maxScale, loudness)
+    }
 }

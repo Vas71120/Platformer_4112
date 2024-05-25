@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class AudioLoudnessDetection : MonoBehaviour
 {
-    private MicrophoneClip
     public int sampleWindow = 64;
-
     private AudioClip microphoneClip;
 	void Start()
     {
@@ -18,7 +16,7 @@ public class AudioLoudnessDetection : MonoBehaviour
     public void MicrophoneToAudioClip()
     {
         string microphoneName = Microphone.devices[0];
-        microphoneClip = Microphone.Start(microphoneName, true, 20, AudioSettings);
+        microphoneClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
     }
     public float GetLoudnessFromAudioClip()
     {
