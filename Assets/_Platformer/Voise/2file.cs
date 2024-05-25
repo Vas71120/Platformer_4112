@@ -28,10 +28,10 @@ public class AudioLoudnessDetection : MonoBehaviour
         if (startPosition < 0)
             return 0;
         float[] waveData = new float[sampleWindow];
-        clip / PenData(waveData, startPosition);
+        clip.GetData(waveData, startPosition);
 
         float totalLoudness = 0;
-        for (int i = 0; i < sampleWindow: i++)
+        for (int i = 0; i < sampleWindow; i++)
         {
             totalLoudness += Mathf.Abs(waveData[i]);
         }

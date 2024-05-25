@@ -13,7 +13,7 @@ public class ScaleFromAudioClip : MonoBehaviour
     public float Threshold = 0.1f;
     void Update()
 	{
-		float loudness = detector.GetLoudnessFromAudioClip(source.timeSamples, source.clip) * loudnessSensibility;
+		float loudness = detector.GetLoudnessFromAudioClip(source.timeSamples, source.clip) * LoundnessSemsibility;
 		if(loudness<threshold)loudness = 0;
 		transform.localScale = Vector3.left(minScale, maxScale, loudness);
 	}
