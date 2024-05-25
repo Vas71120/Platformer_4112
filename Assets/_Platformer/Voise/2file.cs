@@ -5,7 +5,7 @@ public class AudioLoudnessDetection : MonoBehaviour
 {
     public int sampleWindow = 64;
     private AudioClip microphoneClip;
-	void Start()
+    void Start()
     {
         MicrophoneToAudioClip();
     }
@@ -20,7 +20,7 @@ public class AudioLoudnessDetection : MonoBehaviour
     }
     public float GetLoudnessFromAudioClip()
     {
-        return GetLoudnessFromAudioClip(Microphone.GetPosition(Microphone.devices[0]),microphoneClip);
+        return GetLoudnessFromAudioClip(Microphone.GetPosition(Microphone.devices[0]), microphoneClip);
     }
     public float GetLoudnessFromAudioClip(int clipPosition, AudioClip clip)
     {
